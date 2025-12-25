@@ -27,7 +27,10 @@ func LoadConfig() error {
 	return nil
 }
 
-// SetConfig Set the active configuration
+// SetConfig sets the active configuration.
+// Note: SetConfig does not perform any validation; callers must ensure that
+// the provided config has been validated (for example, by calling ValidateConfig)
+// before invoking this function.
 func SetConfig(config DatabaseConfig) {
 	activeConfig = config
 }

@@ -2,7 +2,7 @@ package databaseconfiglib
 
 import "errors"
 
-// ValidateConfig Validate the given ServiceConfig
+// ValidateConfig validates the given DatabaseConfig
 func ValidateConfig(config DatabaseConfig) error {
 	if config.DatabaseHost == "" {
 		return errors.New("Missing required field: DatabaseHost")
@@ -12,6 +12,9 @@ func ValidateConfig(config DatabaseConfig) error {
 	}
 	if config.DatabasePass == "" {
 		return errors.New("Missing required field: DatabasePass")
+	}
+	if config.DatabasePort <= 0 || config.DatabasePort > 65535 {
+		return errors.New("Invalid value for DatabasePort: must be between 1 and 65535")
 	}
 
 	return nil
