@@ -5,4 +5,5 @@ type DatabaseConfig struct {
 	DatabasePort int64
 	DatabaseUser string
 	DatabasePass string
+	DatabaseName string
 }
