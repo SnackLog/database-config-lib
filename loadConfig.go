@@ -25,7 +25,6 @@ func LoadConfig() error {
 	loadedConfig.DatabaseName = os.Getenv("DATABASE_CONFIG_DB_NAME")
 	loadedConfig.DisableSSL = os.Getenv("DATABASE_CONFIG_DISABLE_SSL") == "true"
 
-
 	if loadedConfig.DatabasePort == 0 {
 		loadedConfig.DatabasePort = 5432 // default port
 	}
