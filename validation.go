@@ -13,6 +13,9 @@ func ValidateConfig(config DatabaseConfig) error {
 	if config.DatabasePass == "" {
 		return errors.New("Missing required field: DatabasePass")
 	}
+	if config.DatabaseName == "" {
+		return errors.New("Missing required field: DatabaseName")
+	}
 	if config.DatabasePort <= 0 || config.DatabasePort > 65535 {
 		return errors.New("Invalid value for DatabasePort: must be between 1 and 65535")
 	}

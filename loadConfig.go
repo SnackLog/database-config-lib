@@ -22,6 +22,7 @@ func LoadConfig() error {
 
 	loadedConfig.DatabaseUser = os.Getenv("DATABASE_CONFIG_DB_USER")
 	loadedConfig.DatabasePass = os.Getenv("DATABASE_CONFIG_DB_PASS")
+	loadedConfig.DatabaseName = os.Getenv("DATABASE_CONFIG_DB_NAME")
 
 	if loadedConfig.DatabasePort == 0 {
 		loadedConfig.DatabasePort = 5432 // default port
