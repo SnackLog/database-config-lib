@@ -28,7 +28,6 @@ func LoadConfig() error {
 		return fmt.Errorf("Invalid DisableSSL value: %v", err)
 	}
 
-
 	if loadedConfig.DatabasePort == 0 {
 		loadedConfig.DatabasePort = 5432 // default port
 	}
