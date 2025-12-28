@@ -6,4 +6,5 @@ type DatabaseConfig struct {
 	DatabaseUser string
 	DatabasePass string
 	DatabaseName string
+	DisableSSL   bool
 }
